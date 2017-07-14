@@ -1,29 +1,28 @@
-# ERC20-Exporter
-### Lightweight explorer for ERC20 based Ethereum tokens
+# AriseCoin (ACO) ERC20-Explorer
+### Lightweight explorer for the AriseCoin Ethereum (ERC20) Token
 
-ERC20-Exporter is an explorer built with NodeJS, Express and Parity. It does not require an external database and retrieves all information on the fly from a backend Ethereum node.
+ACO explorer is an explorer based on the original ERC20-Explorer built with NodeJS, Express and Parity. It does not require an external database and retrieves all information on the fly from a backend Ethereum node. You must install either Geth or Parity of it to work.
 
-
-A demo instance connected to the Golem Network Token is available at [gnt.etherchain.org](http://gnt.etherchain.org).
+A demo instance connected to the AriseCoin Token is available at [aco.arisebank.com](http://aco.arisebank.com).
 
 ## Current Features
-* Browse transactions and accounts
-* Named accounts
-* Event log browser
+* Browse AriseCoin transactions and accounts
+* AriseCoin Named accounts
+* AriseCoin event log browser
 * Supports Transfer and Approval events
-* Live Backend Node status display
+* Live Backend Geth/Parity Node status display
 * Support for all [Bootswatch](https://bootswatch.com/) skins
 * Accounts enumeration
 * Supports IPC and HTTP backend connections
 * Responsive layout
 
-Missing a feature? Please request it by creating a new [Issue](https://github.com/gobitfly/erc20-exporter/issues).
+Missing a feature? Please request it by creating a new [Issue](https://github.com/arisebank/aco-erc20-explorer/issues).
 
 ## Getting started
 
-Supported OS: Ubuntu 16.04
+Supported OS: Ubuntu 16.04 (Not recommended, but tested in production)
 
-Supported Ethereum backend nodes: Parity, Geth (untested)
+Supported Ethereum backend nodes: Parity, Geth (tested)
 
 1. Setup a nodejs & npm environment
 2. Install the latest version of the Parity Ethereum client
@@ -34,4 +33,4 @@ Supported Ethereum backend nodes: Parity, Geth (untested)
 7. Start the explorer: `npm start`
 8. Browse to `http://localhost:3000`
 
-Please note that for large tokens the initial data export can take up to 30 minutes. Once completed it is recommended to change the exportStartBlock parameter in the config file to a block number that is around 30.000 blocks behind the current tip of the chain and restart the exporter.
+Please note that pre-ICO the initial data export will take seconds. After the ICO, it could take up to 10 hours. Once completed it is recommended to change the exportStartBlock parameter in the config file to a block number that is around 30.000 blocks behind the current tip of the chain and restart the exporter.
